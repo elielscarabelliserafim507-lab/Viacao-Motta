@@ -13,59 +13,25 @@
     <div class="brand"><span class="logo">VM</span><div><strong>Viação Motta Virtual</strong><span>Central Operacional</span></div></div>
     <button id="menuBtn" class="menu-btn" aria-label="Abrir menu">☰</button>
   </header>
-
   <div class="layout">
     <aside id="sidebar" class="sidebar">
-      <button class="nav active" data-target="dashboard">Painel</button>
-      <button class="nav" data-target="motoristas">Motoristas</button>
-      <button class="nav" data-target="viagens">Viagens</button>
-      <button class="nav" data-target="rotas">Rotas e escalas</button>
-      <button class="nav" data-target="financeiro">Financeiro</button>
-      <button class="nav" data-target="ranking">Ranking e metas</button>
-      <button class="nav" data-target="skins">Pedir skins</button>
-      <button class="nav" data-target="ia">Assistente IA</button>
+      <button class="nav active" data-target="dashboard">Painel</button><button class="nav" data-target="motoristas">Motoristas</button><button class="nav" data-target="viagens">Viagens</button><button class="nav" data-target="rotas">Rotas e escalas</button><button class="nav" data-target="financeiro">Financeiro</button><button class="nav" data-target="ranking">Ranking e metas</button><button class="nav" data-target="skins">Pedir skins</button><button class="nav" data-target="ia">Assistente IA</button>
     </aside>
-
     <main class="content">
       <section id="dashboard" class="page active">
-        <div class="hero-card">
-          <div><span class="eyebrow">GESTÃO VIRTUAL</span><h1>Operação da Viação Motta em um só lugar.</h1><p>Gerencie motoristas, viagens, rotas, escalas, finanças, metas e pedidos de skins pelo celular.</p></div>
-          <div class="hero-badge">ONLINE</div>
-        </div>
-        <div class="stats">
-          <article><span>Motoristas</span><strong id="statDrivers">0</strong></article>
-          <article><span>Viagens</span><strong id="statTrips">0</strong></article>
-          <article><span>Rotas</span><strong>4</strong></article>
-          <article><span>Saldo virtual</span><strong id="statBalance">R$ 0</strong></article>
-        </div>
-        <div class="grid two">
-          <article class="panel"><h2>Próximas viagens</h2><div id="nextTrips" class="list empty">Nenhuma viagem cadastrada.</div></article>
-          <article class="panel"><h2>Rotas automáticas</h2><div class="list"><div><strong>A-01</strong><span>Manaus → Belém</span></div><div><strong>A-02</strong><span>Belém → Manaus</span></div><div><strong>A-03</strong><span>Manaus → Rio de Janeiro</span></div><div><strong>A-04</strong><span>Rio de Janeiro → Manaus</span></div></div></article>
-        </div>
+        <div class="hero-card"><div><span class="eyebrow">GESTÃO VIRTUAL</span><h1>Operação nacional da Viação Motta.</h1><p>Gerencie motoristas, viagens, rotas, escalas, finanças, metas e pedidos de skins pelo celular.</p></div><div class="hero-badge">BRASIL</div></div>
+        <div class="stats"><article><span>Motoristas</span><strong id="statDrivers">0</strong></article><article><span>Viagens</span><strong id="statTrips">0</strong></article><article><span>Rotas</span><strong id="statRoutes">0</strong></article><article><span>Saldo virtual</span><strong id="statBalance">R$ 0</strong></article></div>
+        <div class="grid two"><article class="panel"><h2>Próximas viagens</h2><div id="nextTrips" class="list empty">Nenhuma viagem cadastrada.</div></article><article class="panel"><h2>Malha nacional</h2><div id="featuredRoutes" class="list"></div></article></div>
       </section>
-
-      <section id="motoristas" class="page">
-        <div class="page-head"><div><span class="eyebrow">EQUIPE</span><h1>Motoristas</h1></div></div>
-        <div class="grid two"><form id="driverForm" class="panel form"><h2>Novo motorista</h2><label>Nome<input id="driverName" required></label><label>Número do crachá<input id="driverBadge" required></label><label>Base<input id="driverBase" placeholder="Ex.: Rio de Janeiro"></label><button class="primary">Cadastrar motorista</button></form><article class="panel"><h2>Cadastrados</h2><div id="driversList" class="list empty">Nenhum motorista cadastrado.</div></article></div>
-      </section>
-
-      <section id="viagens" class="page">
-        <div class="page-head"><div><span class="eyebrow">OPERAÇÃO</span><h1>Viagens</h1></div></div>
-        <div class="grid two"><form id="tripForm" class="panel form"><h2>Nova viagem</h2><label>Rota<select id="tripRoute"><option>A-01 • Manaus → Belém</option><option>A-02 • Belém → Manaus</option><option>A-03 • Manaus → Rio de Janeiro</option><option>A-04 • Rio de Janeiro → Manaus</option></select></label><label>Motorista<input id="tripDriver" placeholder="Nome do motorista" required></label><label>Data<input id="tripDate" type="date" required></label><label>Horário<input id="tripTime" type="time" required></label><button class="primary">Cadastrar viagem</button></form><article class="panel"><h2>Agenda</h2><div id="tripsList" class="list empty">Nenhuma viagem cadastrada.</div></article></div>
-      </section>
-
-      <section id="rotas" class="page"><div class="page-head"><div><span class="eyebrow">PLANEJAMENTO</span><h1>Rotas e escalas</h1></div></div><div class="cards"><article class="route-card"><strong>A-01</strong><h3>Manaus → Belém</h3><span>Região Norte</span></article><article class="route-card"><strong>A-02</strong><h3>Belém → Manaus</h3><span>Região Norte</span></article><article class="route-card"><strong>A-03</strong><h3>Manaus → Rio de Janeiro</h3><span>Interestadual</span></article><article class="route-card"><strong>A-04</strong><h3>Rio de Janeiro → Manaus</h3><span>Interestadual</span></article></div></section>
-
+      <section id="motoristas" class="page"><div class="page-head"><div><span class="eyebrow">EQUIPE</span><h1>Motoristas</h1></div></div><div class="grid two"><form id="driverForm" class="panel form"><h2>Novo motorista</h2><label>Nome<input id="driverName" required></label><label>Número do crachá<input id="driverBadge" required></label><label>Base<input id="driverBase" placeholder="Ex.: Rio de Janeiro"></label><button class="primary">Cadastrar motorista</button></form><article class="panel"><h2>Cadastrados</h2><div id="driversList" class="list empty">Nenhum motorista cadastrado.</div></article></div></section>
+      <section id="viagens" class="page"><div class="page-head"><div><span class="eyebrow">OPERAÇÃO</span><h1>Viagens</h1></div></div><div class="grid two"><form id="tripForm" class="panel form"><h2>Nova viagem</h2><label>Rota<select id="tripRoute"></select></label><label>Motorista<input id="tripDriver" placeholder="Nome do motorista" required></label><label>Data<input id="tripDate" type="date" required></label><label>Horário<input id="tripTime" type="time" required></label><button class="primary">Cadastrar viagem</button></form><article class="panel"><h2>Agenda</h2><div id="tripsList" class="list empty">Nenhuma viagem cadastrada.</div></article></div></section>
+      <section id="rotas" class="page"><div class="page-head"><div><span class="eyebrow">PLANEJAMENTO NACIONAL</span><h1>Rotas e escalas</h1><p class="muted">A = Norte • B = Nordeste • C = Centro-Oeste • D = Sudeste • E = Sul • F = Integração Nacional</p></div></div><div id="routeCards" class="cards"></div></section>
       <section id="financeiro" class="page"><div class="page-head"><div><span class="eyebrow">CONTABILIDADE</span><h1>Financeiro</h1></div></div><div class="grid two"><form id="financeForm" class="panel form"><h2>Novo lançamento</h2><label>Tipo<select id="financeType"><option value="entrada">Entrada</option><option value="saida">Saída</option></select></label><label>Descrição<input id="financeDesc" required></label><label>Valor<input id="financeValue" type="number" min="0" step="0.01" required></label><button class="primary">Registrar</button></form><article class="panel"><h2>Movimentações</h2><div id="financeList" class="list empty">Nenhuma movimentação.</div></article></div></section>
-
       <section id="ranking" class="page"><div class="page-head"><div><span class="eyebrow">DESEMPENHO</span><h1>Ranking e metas</h1></div></div><div class="panel"><h2>Ranking de motoristas</h2><div class="ranking"><div><strong>1º</strong><span>Aguardando dados</span><b>0 pts</b></div><div><strong>2º</strong><span>Aguardando dados</span><b>0 pts</b></div><div><strong>3º</strong><span>Aguardando dados</span><b>0 pts</b></div></div></div></section>
-
       <section id="skins" class="page"><div class="page-head"><div><span class="eyebrow">DESIGN</span><h1>Pedir skins</h1></div></div><form id="skinForm" class="panel form"><label>Modelo do ônibus<input id="skinBus" required></label><label>Descrição da skin<textarea id="skinDesc" rows="5" required></textarea></label><button class="primary">Enviar pedido</button><p id="skinStatus" class="muted"></p></form></section>
-
       <section id="ia" class="page"><div class="page-head"><div><span class="eyebrow">ASSISTENTE</span><h1>IA da Viação Motta</h1></div></div><div class="panel ai-box"><div id="aiMessages" class="ai-messages"><div class="ai-msg">Olá! Posso ajudar a organizar notas, viagens e informações da operação virtual.</div></div><form id="aiForm" class="ai-form"><input id="aiInput" placeholder="Digite uma mensagem..."><button class="primary">Enviar</button></form></div></section>
     </main>
   </div>
-
   <footer>© 2026 Viação Motta Virtual. Sistema para uso em ambiente virtual.</footer>
   <script src="app.js"></script>
 </body>
